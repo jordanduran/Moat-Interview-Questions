@@ -33,3 +33,22 @@ function arraySum(array) {
 
   return total;
 }
+
+function addToCamelCaseToString(input_string) {
+  let words = input_string.split(' ');
+
+  let final_array = [];
+
+  final_array.push(words[0].toLowerCase());
+
+  let size = words.length;
+
+  for (let i = 1; i < size; i++) {
+    let temp_word = words[i].toLowerCase();
+    final_array.push(temp_word.charAt(0).toUpperCase() + temp_word.slice(1));
+  }
+
+  let ans = final_array.join('');
+
+  return ans;
+}
